@@ -1,0 +1,15 @@
+.navigation{
+  padding:10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #33adff;
+  background-color:#4d4d4d;
+  transition: width  5s;
+}
+.navigation:hover{
+  border-right:  6px solid #33adff;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width:115%;
+}
