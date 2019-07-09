@@ -6,6 +6,8 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  id="homes";
+  message="home";
   @HostBinding('class.is-open')
   isOpen = false;
 

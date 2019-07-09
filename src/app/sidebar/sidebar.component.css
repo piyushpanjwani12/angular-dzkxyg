@@ -11,6 +11,10 @@
   border-right:  6px solid #33adff;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  width:115%;
+  width:118%;
   border-left:  6px solid #33adff;
+  
+}
+a{
+  text-decoration: none;
 }

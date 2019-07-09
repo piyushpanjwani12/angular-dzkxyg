@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 import {SidebarComponent} from "../sidebar/sidebar.component";
 @Component({
   selector: 'app-main',
@@ -6,15 +7,13 @@ import {SidebarComponent} from "../sidebar/sidebar.component";
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  @Input() sideBarElement: SidebarComponent;
-
-  @HostListener('click')
-  click() {
-    this.sideBar.toggle();
-  }
+  
+  
+  id;
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
