@@ -12,7 +12,7 @@
 }
 .imgDrag{
   margin-top: 3%;
-  margin: 20px;
+  margin-right: 20px;
   
   margin-left: 25%;
   position: relative;
@@ -34,6 +34,7 @@
 .draggable{
   display:block;
   width: 300px;
+  margin: 20px;
 }
 
 

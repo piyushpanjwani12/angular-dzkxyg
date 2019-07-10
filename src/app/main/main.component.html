@@ -1,6 +1,7 @@
 <html>
   <head>
     <script>
+      Console.log ( "trial");
       function allowDrop(ev) { 
                 ev.preventDefault(); 
             } 
@@ -16,19 +17,20 @@
             } 
     </script>
   </head>
+  <body class=" animated fadeInRight">
 <div class=" imgDrag">
   <div class="row"> 
     <div class="col-sm-6 draggable">
       <img src="https://images.unsplash.com/photo-1562101490-3eb820dc4319?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width=300 draggable="true" ondragstart="dragStart(event)">
     </div>
     <div class="col-sm-6 draggable">
-      <img src="https://images.unsplash.com/photo-1562101490-3eb820dc4319?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width=300 draggable="true" ondragstart="dragStart(event)">
+      <img src="https://images.unsplash.com/photo-1562619398-e7a474328df3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width=300 draggable="true" ondragstart="">
     </div>
   </div>
 </div>
 <div class="container imgDrop">
   <div class="row">
-    <div class="col-sm-6 " >
+    <div class="col-sm-6 " style="background-color:#4d4d4d; color:white; border-radius:15px;">
       <div class="card imgArea" style="width:400px" ondrop="dragDrop(event)" ondragover="allowDrop(event)">
         
         <div class="card-body">
@@ -38,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6 " style="background-color:pink;">
+    <div class="col-sm-6 " style="background-color:#33adff; border-radius:15px;">
       <div class="card imgArea" style="width:400px" ondrop="dragDrop(event)" ondragover="allowDrop(event)">
         
         <div class="card-body">
@@ -52,4 +54,5 @@
   
   
 </div>
+  </body>
 </html>

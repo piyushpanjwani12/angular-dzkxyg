@@ -4,6 +4,7 @@
   align-items: center;
   text-align: center;
   border-bottom: 2px solid #33adff;
+  /* background-image: linear-gradient(90deg,#fa83fc, #add2d9); */
   background-color:#4d4d4d;
   transition: width  5s;
 }
@@ -12,9 +13,12 @@
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   width:118%;
-  border-left:  6px solid #33adff;
+  border-left:  10px solid #33adff;
   
 }
 a{
   text-decoration: none;
+}
+.sideBar{
+  
 }

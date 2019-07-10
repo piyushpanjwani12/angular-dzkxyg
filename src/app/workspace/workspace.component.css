@@ -1,0 +1,7 @@
+.workspace{
+  margin-left:25%;
+  height:600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,24 +1,26 @@
 <div class="info">
+<br/>
+<input name="Text" type="text" class="form-control animated fadeInDown" placeholder="Search the name" [(ngModel)]="searchText" >
+<br/>
+<br/>
 
-<input name="Text" type="text" class="form-control" placeholder="Search da Fish" [(ngModel)]="searchText">
+<div class="container-fluid animated fadeInRight" >
+  <table class="table table-striped table-info" >
+      <thead>
+          <tr class="table-info">
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Username</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let data of httpdata | filter: 'name' :searchText">
+              <th scope=" row">{{data.id}}</th>
+              <td>{{data.name}}</td>
+              <td>{{data.username}}</td>
+          </tr>
 
-
-
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Username</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let data of httpdata | filter: 'name' :searchText">
-            <th scope=" row">{{data.id}}</th>
-            <td>{{data.name}}</td>
-            <td>{{data.username}}</td>
-        </tr>
-
-    </tbody>
+      </tbody>
 </table>
+</div>
 </div>
