@@ -1,17 +1,55 @@
+<html>
+  <head>
+    <script>
+      function allowDrop(ev) { 
+                ev.preventDefault(); 
+            } 
+              
+            function dragStart(ev) { 
+                ev.dataTransfer.setData("text", ev.target.id); 
+            } 
+              
+            function dragDrop(ev) { 
+                ev.preventDefault(); 
+                var data = ev.dataTransfer.getData("text"); 
+                ev.target.appendChild(document.getElementById(data)); 
+            } 
+    </script>
+  </head>
+<div class=" imgDrag">
+  <div class="row"> 
+    <div class="col-sm-6 draggable">
+      <img src="https://images.unsplash.com/photo-1562101490-3eb820dc4319?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width=300 draggable="true" ondragstart="dragStart(event)">
+    </div>
+    <div class="col-sm-6 draggable">
+      <img src="https://images.unsplash.com/photo-1562101490-3eb820dc4319?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width=300 draggable="true" ondragstart="dragStart(event)">
+    </div>
+  </div>
+</div>
 <div class="container imgDrop">
   <div class="row">
-    <div class="col-sm-6 ">
-      <div class="card" style="width:400px">
-        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+    <div class="col-sm-6 " >
+      <div class="card imgArea" style="width:400px" ondrop="dragDrop(event)" ondragover="allowDrop(event)">
+        
         <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
+          <h4 class="card-title">Upload Image Here</h4>
           <p class="card-text">Some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+          
         </div>
       </div>
     </div>
     <div class="col-sm-6 " style="background-color:pink;">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.    
+      <div class="card imgArea" style="width:400px" ondrop="dragDrop(event)" ondragover="allowDrop(event)">
+        
+        <div class="card-body">
+          <h4 class="card-title">Upload Image Here</h4>
+          <p class="card-text">Some example text.</p>
+          
+        </div>
+      </div>   
     </div>
   </div>
+  
+  
 </div>
+</html>
