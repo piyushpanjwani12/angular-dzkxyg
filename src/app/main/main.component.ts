@@ -8,7 +8,19 @@ import {SidebarComponent} from "../sidebar/sidebar.component";
 })
 export class MainComponent implements OnInit {
   
-  
+  drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+
+  allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
   id;
   constructor() { }
 

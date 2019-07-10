@@ -10,8 +10,9 @@ import { UsersComponent } from './users/users.component';
 import { FilterPipe } from './filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule,
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, NgxPaginationModule,
     RouterModule.forRoot([
       {
             path: 'main',
