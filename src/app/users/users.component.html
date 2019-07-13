@@ -10,19 +10,38 @@
           <tr class="table-info">
               <th scope="col">#</th>
               <th scope="col">Name</th>
-              <th scope="col">Username</th>
+              <th scope="col">Avatar</th>
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let data of httpdata | filter: 'name' :searchText | paginate: config">
+          <tr *ngFor="let data of httpdata | filter: 'name' :searchText ">
               <th scope=" row">{{data.id}}</th>
               <td>{{data.name}}</td>
-              <td>{{data.username}}</td>
+              <td><img src={{data.avatar}} width=30></td>
           </tr>
 
       </tbody>
 </table>
-  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+<nav aria-label="Page navigation example">
+  <ul class="pagination ">
+    <li class="page-item">
+      <a class="page-link" (click)="previousPage(([page]))" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item" *ngFor="let page of pages"><a class="page-link" (click)="updatePage(([page]))">{{page}}</a></li>
+    <!-- <li class="page-item"><a class="page-link" (click)="updatePage(2)">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+    <li class="page-item">
+      <a class="page-link"  (click)="nextPage(([page]))" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+  
  
 </div>
 </div>

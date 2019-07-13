@@ -1,7 +1,7 @@
 .imgDrop{
   margin-left: 25%;
   margin-top: 10%;
-  position: fixed;
+  position: absolute;
   width: 75%;
   height:30%;
   display: flex;
@@ -31,10 +31,73 @@
   align-items: center;
   
 }
-.draggable{
+.draggable:nth-child(1){
   display:block;
-  width: 300px;
+  width: 305px;
+  height:205px;
   margin: 20px;
+  
+  padding-left :0px;
+  border: 3px dotted #33adff;
+  /* border-radius: 15px; */
+   background-size: contain;
+}
+.draggable:nth-child(2){
+  display:block;
+  width: 305px;
+  height:205px;
+  margin: 20px;
+  padding-left: 0px;
+  border: 3px dotted #4d4d4d;
+  /* border-radius: 15px; */
+   background-size: contain;
+}
+.myImg{
+  /* margin-left: -15px; */
+  height:200px;
+  width:300px; 
+  display:inline-block;
+   
+  margin:0px;
+  padding:0px;
+  z-index: 0;
+  
+}
+
+.myCard{
+  display:none;
+}
+.myCard:hover{
+  cursor: pointer  !important;
+  display:initial  !important;
+}
+.myCard1{
+  display:none;
+}
+.myCard1:hover{
+  cursor: pointer  !important;
+  display:initial  !important;
+}
+.reset{
+  margin-left: 25%;
+  margin-top: 23%;
+  position: absolute;
+  width: 75%;
+  height:10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  
+}
+.reset>.row>i{
+  font-size: 34px;
+  color: #4d4d4d;
+}
+.reset>.row>i:hover{
+  cursor: pointer;
+  font-size: 50px;
+  color: #33adff;
 }
 
 

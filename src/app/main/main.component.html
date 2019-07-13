@@ -2,26 +2,42 @@
   <div class="imgDrag">
     <div class="row"> 
 
-      <div class="col-sm-6 draggable">
+      <div class="col-sm-6 draggable" (drop)="drop($event)" 
+    (dragover)="allowDrop($event)">
         
         <!-- Image 1 to be dragged -->
-        <img 
+        <div class="myImg" style="background-image:url('https://images.unsplash.com/photo-1562101490-3eb820dc4319?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"
+        draggable="true" 
+        (dragstart)="drag($event)" 
+        
+        id="drag1">
+        </div>
+        
+        <!-- <img 
         src="https://images.unsplash.com/photo-1562101490-3eb820dc4319?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" 
         draggable="true" 
         (dragstart)="drag($event)" 
         width=300
-        id="drag1">
+        id="drag1"> -->
       </div>
       
-      <div class="col-sm-6 draggable">
+      <div class="col-sm-6 draggable" (drop)="drop($event)" 
+    (dragover)="allowDrop($event)">
         
         <!-- Image 2 to be dragged -->
-        <img 
+        <div class="myImg" style="background-image:url('https://images.unsplash.com/photo-1562619398-e7a474328df3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'); "
+        draggable="true" 
+        (dragstart)="drag($event)" 
+        
+        id="drag2">
+        </div>
+
+        <!-- <img 
         src="https://images.unsplash.com/photo-1562619398-e7a474328df3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" 
         draggable="true" 
         (dragstart)="drag($event)" 
         width=300
-        id="drag2">
+        id="drag2"> -->
       </div>
     </div>
   </div>
@@ -32,10 +48,10 @@
 
       <!-- Black drop zone -->
       <div class="col-sm-6 " style="background-color:#4d4d4d; color:white; border-radius:15px;">
-        <div class="card imgArea" style="width:400px" (drop)="drop($event)" 
-    (dragover)="allowDrop($event)">
+        <div class="card imgArea " style="width:400px" (drop)="drop($event)" 
+    (dragover)="allowDrop($event)" id="dropHere">
           
-          <div class="card-body">
+          <div class="card-body myCard" >
             <h4 class="card-title">Upload Image Here</h4>
             <p class="card-text">Some example text.</p>
             
@@ -46,9 +62,9 @@
       <!-- Blue drop zone -->
       <div class="col-sm-6 " style="background-color:#33adff; border-radius:15px;">
         <div class="card imgArea" style="width:400px" (drop)="drop($event)" 
-    (dragover)="allowDrop($event)">
+    (dragover)="allowDrop($event)" id="dropHere1">
           
-          <div class="card-body">
+          <div class="card-body myCard1" >
             <h4 class="card-title">Upload Image Here</h4>
             <p class="card-text">Some example text.</p>
             
@@ -58,6 +74,13 @@
     </div>
     
     
+  </div>
+
+  <div class="container reset">
+    <div class="row">
+      <i class="material-icons" title="Reset">settings_backup_restore</i>
+
+    </div>
   </div>
 </div>
 
